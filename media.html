@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Kelas - Website Kelas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="pengumuman.html">Pengumuman</a></li>
+            <li><a href="absen.html">Absensi</a></li>
+            <li><a href="media.html" class="active">Media Kelas</a></li>
+            
+            <!-- Pembungkus Menu Auth & Foto Profil -->
+            <li id="nav-auth" class="nav-user-container">
+                <div class="user-avatar-nav">
+                    <img id="user-nav-img" src="https://unsplash.com" alt="Foto Profil">
+                </div>
+                <a href="login.html" class="btn-login">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Layout Utama Berdampingan -->
+    <div class="main-layout container">
+        
+        <!-- SISI KIRI: GALERI MEDIA -->
+        <main class="main-content">
+            
+            <header class="hero-section">
+                <h1>📸 Galeri & Media Kelas 7.1</h1>
+                <p class="subtitle">Dokumentasi momen berharga dan kegiatan seru kelas kita.</p>
+            </header>
+
+            <section class="content-section">
+                <h2>Foto Kegiatan Terbaru</h2>
+                <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 1.5rem;">
+                    
+                    <!-- Foto Kategori 1 -->
+                    <div class="card animated-card">
+                        <div style="width: 100%; height: 150px; overflow: hidden; border-radius: 8px; background: #e8f5e9; border: 1px solid #52b788;">
+                            <img src="https://unsplash.com" alt="Belajar Bersama" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3 style="margin-top: 10px; font-size: 1.1rem; color: #1b4332;">Kerja Kelompok</h3>
+                        <p class="member-name">Proyek IPA - Membuat Ekosistem Mini</p>
+                    </div>
+
+                    <!-- Foto Kategori 2 -->
+                    <div class="card animated-card">
+                        <div style="width: 100%; height: 150px; overflow: hidden; border-radius: 8px; background: #e8f5e9; border: 1px solid #52b788;">
+                            <img src="https://unsplash.com" alt="Lomba Kelas" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3 style="margin-top: 10px; font-size: 1.1rem; color: #1b4332;">Class Meeting</h3>
+                        <p class="member-name">Juara 1 Tarik Tambang Antar Kelas</p>
+                    </div>
+
+                    <!-- Foto Kategori 3 -->
+                    <div class="card animated-card">
+                        <div style="width: 100%; height: 150px; overflow: hidden; border-radius: 8px; background: #e8f5e9; border: 1px solid #52b788;">
+                            <img src="https://unsplash.com" alt="Mading Kelas" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3 style="margin-top: 10px; font-size: 1.1rem; color: #1b4332;">Mading Digital</h3>
+                        <p class="member-name">Kumpulan Puisi & Cerpen Karya Siswa</p>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- SISI KANAN: SIDEBAR KALENDER SLIDER -->
+        <aside class="sidebar">
+            <div class="widget-kalender">
+                <div class="kalender-header" id="kalender-bulan-tahun">Melihat Waktu...</div>
+                <div class="kalender-slider-container">
+                    <div class="tgl-samping tgl-kemarin" id="kalender-kemarin">
+                        <span class="angka-tgl">--</span>
+                        <span class="nama-hari">...</span>
+                    </div>
+                    <div class="tgl-utama-raksasa" id="kalender-sekarang">
+                        <span class="angka-tgl">--</span>
+                        <span class="nama-hari">...</span>
+                    </div>
+                    <div class="tgl-samping tgl-besok" id="kalender-besok">
+                        <span class="angka-tgl">--</span>
+                        <span class="nama-hari">...</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Hak Cipta &copy; 2026 Kelas 7.1 | Dibuat oleh Natalio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

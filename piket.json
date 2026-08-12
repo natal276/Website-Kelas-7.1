@@ -1,0 +1,38 @@
+[
+  {
+    "hari_index": 1,
+    "hari_nama": "Senin",
+    "ketua": "Cahaya",
+    "anggota": ["masih placeholder 😅", "Cici", "Dodi"]
+  },
+  {
+    "hari_index": 2,
+    "hari_nama": "Selasa",
+    "ketua": "Eka Wijaya",
+    "anggota": ["Fani", "Gita", "Hadi"]
+  },
+  {
+    "hari_index": 3,
+    "hari_nama": "Rabu",
+    "ketua": "Indra",
+    "anggota": ["Joko", "Kiki", "Lia"]
+  },
+  {
+    "hari_index": 4,
+    "hari_nama": "Kamis",
+    "ketua": "Mega",
+    "anggota": ["Novi", "Omar", "Pia"]
+  },
+  {
+    "hari_index": 5,
+    "hari_nama": "Jumat",
+    "ketua": "Rian",
+    "anggota": ["Santi", "Tono", "Uli"]
+  },
+  {
+    "hari_index": 6,
+    "hari_nama": "Sabtu",
+    "ketua": "Vera",
+    "anggota": ["Wawan", "Xena", "Yanto"]
+  }
+]

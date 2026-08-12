@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Website Kelas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Overlay Animasi Intro (Hanya satu elemen, tidak duplikat) -->
+    <div id="intro-overlay" class="intro-overlay-style">
+        <div class="intro-content">
+            <span class="intro-logo">↺</span>
+            <h2>Memuat Kelas 7.1...</h2>
+        </div>
+    </div>
+
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="pengumuman.html">Pengumuman</a></li>
+            <li><a href="absen.html">Absensi</a></li>
+            <li><a href="media.html">Media Kelas</a></li>
+            
+            <!-- Pembungkus Menu Auth & Foto Profil -->
+            <li id="nav-auth" class="nav-user-container">
+                <div class="user-avatar-nav">
+                    <img id="user-nav-img" src="https://unsplash.com" alt="Foto Profil">
+                </div>
+                <a href="login.html" class="btn-login">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Layout Utama Berdampingan (Konten Kiri & Sidebar Kanan) -->
+    <div class="main-layout container">
+        
+        <!-- SISI KIRI: KONTEN UTAMA -->
+        <main class="main-content">
+            
+            <!-- Judul Utama -->
+            <header class="hero-section">
+                <h1>Selamat Datang di Website Kelas 7.1</h1>
+                <p class="subtitle">Ruang informasi dan kreativitas bersama.</p>
+            </header>
+
+            <!-- 1. Kalimat Pendahuluan -->
+            <section class="content-section animated-fade">
+                <h2>Tentang Website Ini</h2>
+                <p>Ini adalah halaman resmi kelas 7.1. Tempat berkumpulnya informasi, jadwal, dan dokumentasi seluruh kegiatan kelas kita.</p>
+            </section>
+
+            <!-- 2. Kepengurusan Kelas -->
+            <section class="content-section">
+                <h2>Kepengurusan Kelas</h2>
+                <div class="cards-grid" id="pengurus-container">
+                    <!-- Data JSON akan di-render di sini oleh JavaScript -->
+                </div>
+            </section>
+
+            <!-- 3. Jadwal Piket Kelas -->
+            <section class="content-section">
+                <h2>Jadwal Piket Kelas</h2>
+                <p class="info-piket">*Hari aktif piket akan otomatis menyala terang dan menonjolkan Ketua Piket!</p>
+                <div class="piket-grid" id="piket-container">
+                    <!-- Data JSON akan di-render di sini oleh JavaScript -->
+                </div>
+            </section>
+
+            <!-- 4. JADWAL PELAJARAN -->
+            <section class="content-section">
+                <h2>📚 Jadwal Pelajaran Kelas</h2>
+                <div class="pelajaran-container">
+                    <!-- Hari Senin -->
+                    <div class="hari-pelajaran">
+                        <h4>Senin</h4>
+                        <ol>
+                            <li>Upacara Bendera</li>
+                            <li>Matematika Wajib</li>
+                            <li>Bahasa Indonesia</li>
+                            <li>Sejarah Indonesia</li>
+                        </ol>
+                    </div>
+
+                    <!-- Hari Selasa -->
+                    <div class="hari-pelajaran">
+                        <h4>Selasa</h4>
+                        <ol>
+                            <li>Fisika / Geografi</li>
+                            <li>Kimia / Sosiologi</li>
+                            <li>Bahasa Inggris</li>
+                            <li>Pendidikan Agama</li>
+                        </ol>
+                    </div>
+
+                    <!-- Hari Rabu -->
+                    <div class="hari-pelajaran">
+                        <h4>Rabu</h4>
+                        <ol>
+                            <li>Biologi / Ekonomi</li>
+                            <li>Seni Budaya</li>
+                            <li>Penjasorkes (Olahraga)</li>
+                            <li>Prakarya</li>
+                        </ol>
+                    </div>
+
+                    <!-- Hari Kamis -->
+                    <div class="hari-pelajaran">
+                        <h4>Kamis</h4>
+                        <ol>
+                            <li>Matematika Peminatan</li>
+                            <li>Bahasa Arab / Jerman</li>
+                            <li>PPKn</li>
+                            <li>Informatika</li>
+                        </ol>
+                    </div>
+
+                    <!-- Hari Jumat -->
+                    <div class="hari-pelajaran">
+                        <h4>Jumat</h4>
+                        <ol>
+                            <li>Literasi / Bersih Lingkungan</li>
+                            <li>Bimbingan Konseling</li>
+                            <li>Sejarah Peminatan</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- SISI KANAN: SIDEBAR KHUSUS KALENDER SLIDER -->
+        <aside class="sidebar">
+            <div class="widget-kalender">
+                <div class="kalender-header" id="kalender-bulan-tahun">Melihat Waktu...</div>
+                
+                <div class="kalender-slider-container">
+                    <!-- Kemarin -->
+                    <div class="tgl-samping tgl-kemarin" id="kalender-kemarin">
+                        <span class="angka-tgl">--</span>
+                        <span class="nama-hari">...</span>
+                    </div>
+                    
+                    <!-- Hari Ini (Raksasa) -->
+                    <div class="tgl-utama-raksasa" id="kalender-sekarang">
+                        <span class="angka-tgl">--</span>
+                        <span class="nama-hari">...</span>
+                    </div>
+                    
+                    <!-- Besok -->
+                    <div class="tgl-samping tgl-besok" id="kalender-besok">
+                        <span class="angka-tgl">--</span></>
+                        <span class="nama-hari">...</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Hak Cipta &copy; 2026 Kelas 7.1 | Dibuat oleh Natalio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,555 @@
+/* ==========================================
+   1. RESET & LAYOUT UTAMA (GRID & SIDEBAR)
+   ========================================== */
+* {
+    margin: 0;
+    /* ... sisa kode reset ... */
+}
+
+/* SELIPKAN INI */
+html {
+    font-size: 16px; 
+    scroll-behavior: smooth;
+}
+
+/* GANTI BODY JADI INI */
+body {
+    background-color: #f1f6f4;
+    color: #2c3e35; 
+    line-height: 1.6;
+    font-size: 1rem; 
+}
+
+
+.navbar {
+    /* Navbar warna hijau rimba gelap */
+    background-color: #1e3f20;
+    box-shadow: 0 4px 12px rgba(10, 30, 15, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Tambahan */
+    list-style: none;
+    padding: 1rem 0; /* Diubah */
+    gap: 1.5rem;     /* Tambahan */
+}
+
+.nav-links li { margin: 0 15px; }
+.nav-links a {
+    text-decoration: none;
+    color: #cbd5e1; /* Warna teks abu muda agar kontras */
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Hover navbar berubah menjadi hijau daun muda segar */
+.nav-links a:hover, .nav-links a.active { 
+    color: #a3e635; 
+}
+
+/* Tombol login berbentuk elips warna hijau daun cerah */
+.nav-links .btn-login {
+    background-color: #2e7d32;
+    color: #ffffff;
+    padding: 0.4rem 1.2rem; /* Diubah */
+    border-radius: 20px;
+    border: 1px solid #4ade80;
+}
+
+.nav-links .btn-login:hover {
+    background-color: #15803d;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0.4);
+}
+
+/* Mengatur Posisi Konten Utama & Sidebar di Atas */
+/* Mengubah tata letak layout utama menjadi satu kolom penuh yang rapi */
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px; 
+    gap: 2rem;
+    max-width: 1200px; 
+    margin: 2rem auto;
+    padding: 0 1.25rem;
+}
+
+.sidebar .widget-kalender {
+    position: sticky;
+    top: 5rem;
+}
+
+@media (max-width: 900px) {
+    .main-layout { 
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+    }
+    .sidebar { 
+        order: -1; 
+    } 
+    .nav-links {
+        padding: 0.75rem;
+        gap: 1rem;
+    }
+}
+
+
+/* ==========================================
+   2. DESAIN KEPENGURUSAN (DENGAN FOTO)
+   ========================================== */
+.content-section {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px; /* Sudut lebih melengkung alami */
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(27, 54, 33, 0.04);
+    border: 1px solid #e2ebd5;
+}
+
+/* Judul seksi diberi aksen pembatas warna hijau pohon */
+.content-section h2 {
+    color: #1b4332;
+    margin-bottom: 20px;
+    border-left: 5px solid #2d6a4f;
+    padding-left: 12px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #f7fbf7;
+    border: 1px solid #e1ebe1;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(45, 106, 79, 0.12);
+    background: #ffffff;
+}
+
+/* Box Foto Profil Perangkat Kelas diberi bingkai hijau daun */
+.avatar-box {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #52b788;
+    background-color: #e8f5e9;
+}
+
+.avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-name {
+    font-size: 0.9rem;
+    color: #52796f;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* SELIPKAN KODE BARU INI DI SINI */
+.user-avatar-nav {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    border: 2px solid #a3e635;
+}
+
+.user-avatar-nav img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ==========================================
+   3. JADWAL PIKET PINTAR & KETUA LOKET
+   ========================================== */
+.info-piket {
+    font-size: 0.85rem;
+    color: #52796f;
+    margin-bottom: 15px;
+}
+
+.piket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.piket-card {
+    background: #ffffff;
+    border: 1px solid #d8e2dc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.piket-header {
+    background: #e8f0ea;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #2d6a4f;
+}
+
+.piket-body {
+    padding: 12px;
+    font-size: 0.9rem;
+}
+
+.piket-body ul {
+    list-style: none;
+    padding-left: 5px;
+    color: #475a51;
+}
+
+/* Ketua Piket / Loket */
+.ketua-loket {
+    font-weight: bold;
+    color: #1b4332;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #d8e2dc;
+}
+
+/* EFEK MENONJOL: Berpijar Kuning Kunang-kunang di Malam Hari/Siang */
+.piket-card.hari-aktif {
+    transform: scale(1.07);
+    border: 2px solid #9ef01a;
+    background: #f7fee7;
+    box-shadow: 0 10px 25px rgba(158, 240, 26, 0.3);
+    animation: forestGlow 2s infinite ease-in-out;
+}
+
+.piket-card.hari-aktif .piket-header {
+    background: #70e000;
+    color: #113000;
+}
+
+.piket-card.hari-aktif .ketua-loket {
+    color: #38b000;
+    font-size: 1rem;
+    background: #ccff33;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+@keyframes forestGlow {
+    0% { box-shadow: 0 0 0 0 rgba(112, 224, 0, 0.5); }
+    70% { box-shadow: 0 0 0 12px rgba(112, 224, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(112, 224, 0, 0); }
+}
+
+/* ==========================================
+   4. JADWAL PELAJARAN
+   ========================================== */
+.pelajaran-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.hari-pelajaran {
+    background: #f4f9f4;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #40916c;
+}
+
+.hari-pelajaran h4 {
+    color: #1b4332;
+    margin-bottom: 10px;
+}
+
+.hari-pelajaran ol {
+    padding-left: 20px;
+    font-size: 0.95rem;
+    color: #2d6a4f;
+}
+
+/* ==========================================
+   5. KOMPONEN KALENDER SIDEBAR (MODEREN SLIDER)
+   ========================================== */
+.widget-kalender {
+    background: white;
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border: 1px solid #e2ebd5;
+    text-align: center;
+}
+
+.kalender-header {
+    font-weight: bold;
+    color: #1b4332;
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Container utama slider 3 hari */
+.kalender-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    background: #f4f9f4;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+/* Style umum untuk tanggal kemarin & besok (Abu-abu & Kecil) */
+.tgl-samping {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #94a3b8; /* Abu-abu redup */
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.tgl-samping .angka-tgl {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.tgl-samping .nama-hari {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+/* Style untuk Tanggal Hari Ini (RAKSASA & MENONJOL) */
+.tgl-utama-raksasa {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2d6a4f; /* Hijau botol */
+    color: white;
+    padding: 0.8rem 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(45, 106, 79, 0.2);
+    transform: scale(1.05);
+}
+
+.tgl-utama-raksasa .angka-tgl {
+    font-size: 2.5rem; /* Ukuran Raksasa */
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.tgl-utama-raksasa .nama-hari {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   6. ANIMASI & FOOTER INTERFACES
+   ========================================== */
+.hero-section { text-align: center; margin-bottom: 40px; animation: slideDown 1s ease-out; }
+.hero-section h1 { font-size: 2.2rem; color: #1b4332; text-shadow: 1px 1px 0px #ffffff; }
+.subtitle { color: #52796f; }
+
+@keyframes slideDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
+.animated-fade { animation: fadeIn 1s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.footer { 
+    text-align: center; 
+    padding: 20px; 
+    color: #52796f; 
+    font-size: 0.9rem; 
+    margin-top: 50px; 
+    border-top: 1px solid #e2ebd5; 
+    background-color: #e8f0ea;
+}
+
+/* ==========================================
+   7. TAMBAHAN KHUSUS HALAMAN AUTH (LOGIN/REG)
+   ========================================== */
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    margin-top: 20px;
+}
+
+.auth-card {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(27, 54, 33, 0.06);
+    border: 1px solid #e2ebd5;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-header h2 {
+    color: #1b4332;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2d6a4f;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #1b4332;
+    background-color: #f4f9f4;
+    transition: all 0.3s ease;
+}
+
+/* Fokus input menyala warna daun */
+.form-group input:focus {
+    outline: none;
+    border-color: #52b788;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.2);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #2d6a4f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #1b4332;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(27, 67, 50, 0.2);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.auth-footer-links {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.auth-footer-links a {
+    color: #40916c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.auth-footer-links a:hover {
+    color: #1b4332;
+    text-decoration: underline;
+}
+
+.error-box {
+    display: none;
+    background-color: #fdf2f2;
+    color: #9b1c1c;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 4px solid #c81e1e;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+/* ==========================================
+   8. PERBAIKAN ANIMASI INTRO (SESSION CHECK)
+   ========================================== */
+.intro-overlay-style {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #1e3f20; /* Hijau rimba sesuai tema navbar */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Di atas segalanya */
+    transition: opacity 0.4s ease, visibility 0.4s;
+}
+
+.intro-content {
+    text-align: center;
+}
+
+.intro-logo {
+    font-size: 3.5rem;
+    display: inline-block;
+    animation: bounceIntro 0.8s infinite alternate;
+}
+
+@keyframes bounceIntro {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+/* KELAS KHUSUS: Untuk mematikan animasi bawaan jika user sudah masuk */
+./* KELAS KHUSUS: Untuk mematikan animasi bawaan jika user sudah masuk */
+.tanpa-animasi, 
+.tanpa-animasi .hero-section, 
+.tanpa-animasi .animated-fade {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+/* TAMBAHAN: Sembunyikan intro-overlay secara paksa dan instan */
+.tanpa-animasi .intro-overlay-style {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}

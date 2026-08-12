@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengumuman - Website Kelas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi (Konsisten dengan Beranda) -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="pengumuman.html" class="active">Pengumuman</a></li>
+            <li><a href="absen.html">Absensi</a></li>
+            <li><a href="media.html">Media Kelas</a></li>
+            
+            <!-- Pembungkus Menu Auth & Foto Profil -->
+            <li id="nav-auth" class="nav-user-container">
+                <div class="user-avatar-nav">
+                    <img id="user-nav-img" src="https://unsplash.com" alt="Foto Profil">
+                </div>
+                <a href="login.html" class="btn-login">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Layout Utama Berdampingan (Konten Kiri & Sidebar Kanan) -->
+    <div class="main-layout container">
+        
+        <!-- SISI KIRI: KONTEN PENGUMUMAN UTAMA -->
+        <main class="main-content">
+            
+            <!-- Judul Utama Halaman -->
+            <header class="hero-section">
+                <h1>📢 Pengumuman Kelas 7.1</h1>
+                <p class="subtitle">Informasi penting dan berita terbaru seputar kegiatan kelas.</p>
+            </header>
+
+            <!-- Wadah Pengumuman Penting (Pinned/Sematkan) -->
+            <section class="content-section animated-fade" style="border-left: 5px solid #b91c1c; background: #ffff7a;">
+                <h2 style="color: #9b1c1c;">📌 Pengumuman Penting!</h2>
+                <p><strong>Besok Pagi:</strong> Harap membawa alat gambar (krayon/pensil warna) dan penggaris untuk proyek seni budaya jam ke-3. Jangan sampai terlambat!</p>
+            </section>
+
+            <!-- Daftar Pengumuman Lainnya -->
+            <section class="content-section">
+                <h2>Daftar Berita Terbaru</h2>
+                
+                <!-- Item Pengumuman 1 -->
+                <div class="hari-pelajaran" style="margin-bottom: 1.25rem;">
+                    <h4>Ujian Tengah Semester (UTS)</h4>
+                    <p style="font-size: 0.9rem; color: #52796f; margin-bottom: 0.5rem;">📅 Diposting: 10 Agustus 2026</p>
+                    <p>Jadwal UTS resmi akan dibagikan dalam bentuk PDF melalui grup WhatsApp kelas akhir minggu ini. Persiapkan diri kalian dengan baik.</p>
+                </div>
+
+                <!-- Item Pengumuman 2 -->
+                <div class="hari-pelajaran">
+                    <h4>Iuran Kas Bulanan</h4>
+                    <p style="font-size: 0.9rem; color: #52796f; margin-bottom: 0.5rem;">📅 Diposting: 08 Agustus 2026</p>
+                    <p>Bagi teman-teman yang belum melunasi uang kas untuk bulan Agustus, silakan segera menghubungi Bendahara Kelas (Siti) sebelum hari Jumat.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- SISI KANAN: SIDEBAR KHUSUS KALENDER SLIDER -->
+        <aside class="sidebar">
+            <div class="widget-kalender">
+                <div class="kalender-header" id="kalender-bulan-tahun">Melihat Waktu...</div>
+                
+                <div class="kalender-slider-container">
+                    <!-- Kemarin -->
+                    <div class="tgl-samping tgl-kemarin" id="kalender-kemarin">
+                        <span class="angka-tgl">--</span>
+                        <span class="nama-hari">...</span>
+                    </div>
+                    
+                    <!-- Hari Ini (Raksasa) -->
+                    <div class="tgl-utama-raksasa" id="kalender-sekarang">
+                        <span class="angka-tgl">--</span>
+                        <span class="nama-hari">...</span>
+                    </div>
+                    
+                    <!-- Besok -->
+                    <div class="tgl-samping tgl-besok" id="kalender-besok">
+                        <span class="angka-tgl">--</span>
+                        <span class="nama-hari">...</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Hak Cipta &copy; 2026 Kelas 7.1 | Dibuat oleh Natalio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

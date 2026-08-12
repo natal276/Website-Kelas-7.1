@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Website Kelas 7.1</title>
+    <!-- Menghubungkan ke file CSS eksternal kelas bertema hutan -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi Utama (Sama persis dengan index.html) -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="pengumuman.html">Pengumuman</a></li>
+            <li><a href="absen.html">Absensi</a></li>
+            <li><a href="media.html">Media Kelas</a></li>
+            
+            <!-- Pembungkus Menu Auth & Foto Profil Placeholder -->
+            <li id="nav-auth" class="nav-user-container">
+                <div class="user-avatar-nav">
+                    <!-- Menggunakan gambar JPG siluet profil bawaan -->
+                    <img id="user-nav-img" src="https://unsplash.com" alt="Foto Profil">
+                </div>
+                <a href="login.html" class="btn-login active">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Pembungkus Utama Form Login dengan Tema Hutan -->
+    <div class="auth-wrapper container animated-fade">
+        <div class="auth-card">
+            <header class="auth-header">
+                <h2>Halaman Login</h2>
+                <p class="subtitle">Masuk untuk mengakses akun kelas Anda</p>
+            </header>
+            
+            <!-- Form Login -->
+            <form id="formLogin">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Masukkan username Anda" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Masukkan password Anda" required>
+                </div>
+                
+                <button type="submit" class="btn-submit">Masuk</button>
+                
+                <div class="auth-footer-links">
+                    <a href="register.html">Tidak punya akun? Daftar di sini</a>
+                </div>
+            </form>
+
+            <!-- Tempat menampilkan pesan error terdesain -->
+            <p id="pesanError" class="error-box"></p>
+        </div>
+    </div>
+
+    <!-- Footer Sinkron dengan Hak Cipta Kelas 7.1 -->
+    <footer class="footer">
+        <p>Hak Cipta &copy; 2026 Kelas 7.1 | Dibuat oleh Natalio</p>
+    </footer>
+
+    <!-- Menghubungkan ke file script pusat -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+    "jabatan": "Ketua Kelas",
+    "nama": "Rio",
+    "username": "~",
+    "foto": "https://picsum.photos"
+  },
+  {
+    "jabatan": "Wakil Ketua",
+    "nama": "Darrel",
+    "username": "~",
+    "foto": "https://picsum.photos"
+  },
+  {
+    "jabatan": "Sekretaris 1",
+    "nama": "Keira",
+    "username": "~",
+    "foto": "https://picsum.photos"
+  },
+  {
+    "jabatan": "Sekretaris 2",
+    "nama": "Putri",
+    "username": "~",
+    "foto": "https://picsum.photos"
+  },
+  {
+    "jabatan": "Bendahara 1",
+    "nama": "Rayhan",
+    "username": "~`",
+    "foto": "https://picsum.photos"
+  },
+  {
+    "jabatan": "Bendahara 2",
+    "nama": "Gendhis",
+    "username": "~",
+    "foto": "https://picsum.photos"
+  }
+]

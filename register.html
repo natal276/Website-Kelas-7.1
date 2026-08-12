@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun - Website Kelas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="pengumuman.html">Pengumuman</a></li>
+            <li><a href="absen.html">Absensi</a></li>
+            <li><a href="media.html">Media Kelas</a></li>
+            
+            <!-- Pembungkus Menu Auth & Foto Profil -->
+            <li id="nav-auth" class="nav-user-container">
+                <div class="user-avatar-nav">
+                    <img id="user-nav-img" src="https://unsplash.com" alt="Foto Profil">
+                </div>
+                <a href="login.html" class="btn-login active">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Konten Utama Form Register -->
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            
+            <div class="auth-header">
+                <h2>Daftar Akun Baru</h2>
+                <p class="subtitle">Buat akun untuk mengakses fitur website kelas 7.1</p>
+            </div>
+
+            <!-- Formulir Registrasi -->
+            <form id="formRegister">
+                
+                <div class="form-group">
+                    <label for="namaLengkap">Nama Lengkap</label>
+                    <input type="text" id="namaLengkap" placeholder="Masukkan nama lengkap Anda" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regUsername">Username</label>
+                    <input type="text" id="regUsername" placeholder="Buat username unik" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fotoProfil">Link Foto Profil (URL)</label>
+                    <input type="url" id="fotoProfil" placeholder="Contoh: https://link-foto.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" placeholder="Buat password minimal 6 karakter" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Daftar Sekarang</button>
+            </form>
+
+            <!-- Box Pesan Logika (Error / Sukses) -->
+            <div id="pesanRegister" class="error-box"></div>
+
+            <div class="auth-footer-links">
+                <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Hak Cipta &copy; 2026 Kelas 7.1 | Dibuat oleh Natalio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

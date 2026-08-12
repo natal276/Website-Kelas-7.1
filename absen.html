@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi - Website Kelas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="pengumuman.html">Pengumuman</a></li>
+            <li><a href="absen.html" class="active">Absensi</a></li>
+            <li><a href="media.html">Media Kelas</a></li>
+            
+            <!-- Pembungkus Menu Auth & Foto Profil -->
+            <li id="nav-auth" class="nav-user-container">
+                <div class="user-avatar-nav">
+                    <img id="user-nav-img" src="https://unsplash.com" alt="Foto Profil">
+                </div>
+                <a href="login.html" class="btn-login">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Layout Utama Berdampingan -->
+    <div class="main-layout container">
+        
+        <!-- SISI KIRI: FORMULIR ABSENSI -->
+        <main class="main-content">
+            
+            <header class="hero-section">
+                <h1>📝 Absensi Mandiri Kelas 7.1</h1>
+                <p class="subtitle">Silakan isi formulir di bawah ini jika berhalangan hadir atau sakit.</p>
+            </header>
+
+            <section class="content-section auth-card" style="max-width: 100%; margin: 0;">
+                <h2>Formulir Keterangan Hadir</h2>
+                <form id="formAbsen" style="margin-top: 1.5rem;">
+                    
+                    <div class="form-group">
+                        <label for="namaSiswa">Nama Lengkap Siswa</label>
+                        <input type="text" id="namaSiswa" placeholder="Contoh: Natalio" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nomorAbsen">Nomor Absen</label>
+                        <input type="number" id="nomorAbsen" min="1" max="40" placeholder="Contoh: 24" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="statusAbsen" style="display: block; margin-bottom: 8px; font-weight: 500; color: #2d6a4f; font-size: 0.9rem;">Keterangan</label>
+                        <select id="statusAbsen" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #ced4da; border-radius: 8px; font-size: 0.95rem; color: #1b4332; background-color: #f4f9f4;" required>
+                            <option value="" disabled selected>-- Pilih Keterangan --</option>
+                            <option value="Sakit">Sakit</option>
+                            <option value="Izin">Izin</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alasan">Alasan / Pesan Tambahan</label>
+                        <input type="text" id="alasan" placeholder="Contoh: Demam tinggi / Ada keperluan keluarga">
+                    </div>
+
+                    <button type="submit" class="btn-submit">Kirim Absen</button>
+                </form>
+            </section>
+
+        </main>
+
+        <!-- SISI KANAN: SIDEBAR KALENDER SLIDER -->
+        <aside class="sidebar">
+            <div class="widget-kalender">
+                <div class="kalender-header" id="kalender-bulan-tahun">Melihat Waktu...</div>
+                <div class="kalender-slider-container">
+                    <div class="tgl-samping tgl-kemarin" id="kalender-kemarin">
+                        <span class="angka-tgl">--</span>
+                        <span class="nama-hari">...</span>
+                    </div>
+                    <div class="tgl-utama-raksasa" id="kalender-sekarang">
+                        <span class="angka-tgl">--</span>
+                        <span class="nama-hari">...</span>
+                    </div>
+                    <div class="tgl-samping tgl-besok" id="kalender-besok">
+                        <span class="angka-tgl">--</span>
+                        <span class="nama-hari">...</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Hak Cipta &copy; 2026 Kelas 7.1 | Dibuat oleh Natalio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
