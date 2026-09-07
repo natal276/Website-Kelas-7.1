@@ -1,24 +1,71 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Judul Halaman Web</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aspirasi - Website Kelas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="#">NamaLogo</a>
+  <!-- Navigasi (sama dengan index) -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="pengumuman.html">Pengumuman</a></li>
+      <li><a href="absen.html">Absensi</a></li>
+      <li><a href="media.html">Media Kelas</a></li>
+      <li><a href="aspirasi.html" class="active">Aspirasi</a></li>
+      <li id="nav-auth" class="nav-user-container">
+        <div class="user-avatar-nav">
+          <img id="user-nav-img" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" alt="Foto Profil">
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#">Tentang Kami</a></li>
-                <li><a href="#">Layanan</a></li>
-                <li><a href="#">Kontak</a></li>
-            </ul>
-        </nav>
-    </header>
+        <a href="login.html" class="btn-login">Login</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="main-layout container">
+    <main class="main-content">
+      <header class="hero-section">
+        <h1>📝 Halaman Aspirasi</h1>
+        <p class="subtitle">Kirim aspirasi, kritik, dan saran untuk kelas. Minimal 3 kalimat. Tidak boleh spamming/trolling.</p>
+      </header>
+
+      <section class="content-section" id="form-aspirasi-section">
+        <h2>Kirim Aspirasi</h2>
+        <div id="aspirasi-form-wrapper">
+          <p id="aspirasi-hint" style="color:#52796f;">Silakan login untuk mengirim aspirasi.</p>
+        </div>
+        <div id="aspirasi-error" class="error-box" style="display:none;"></div>
+      </section>
+
+      <section class="content-section">
+        <h2>Aspirasi Terbaru</h2>
+        <div id="aspirasi-list">
+          <!-- Aspirasi akan dirender di sini -->
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <div class="widget-kalender">
+        <div class="kalender-header" id="kalender-bulan-tahun">Melihat Waktu...</div>
+        <div class="kalender-slider-container">
+          <div class="tgl-samping tgl-kemarin" id="kalender-kemarin"><span class="angka-tgl">--</span><span class="nama-hari">...</span></div>
+          <div class="tgl-utama-raksasa" id="kalender-sekarang"><span class="angka-tgl">--</span><span class="nama-hari">...</span></div>
+          <div class="tgl-samping tgl-besok" id="kalender-besok"><span class="angka-tgl">--</span><span class="nama-hari">...</span></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p>Hak Cipta &copy; 2026 Kelas 7.1 | Dibuat oleh Natalio</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    if (typeof initAspirasiPage === 'function') initAspirasiPage();
+  </script>
 </body>
 </html>
